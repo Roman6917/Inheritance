@@ -4,7 +4,16 @@
     <e p="C:\Users\Roman\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Inheritance.-1011029934.00" t="ExcludeRecursive" />
     <e p="C:\Users\Roman\RiderProjects\Inheritance" t="IncludeRecursive">
       <e p="bin" t="ExcludeRecursive" />
-      <e p="Color.cs" t="Include" />
+      <e p="Classes" t="Include">
+        <e p="Circle.cs" t="Include" />
+        <e p="Cylinder.cs" t="Include" />
+        <e p="Parallelepiped.cs" t="Include" />
+        <e p="Rectangle.cs" t="Include" />
+        <e p="Shape.cs" t="Include" />
+      </e>
+      <e p="Enumeration" t="Include">
+        <e p="Color.cs" t="Include" />
+      </e>
       <e p="Inheritance.csproj" t="IncludeRecursive" />
       <e p="Inheritance.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive">
@@ -16,6 +25,7 @@
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.cs" t="Include" />
+      <e p="Task.cs" t="Include" />
     </e>
   </component>
 </project>
