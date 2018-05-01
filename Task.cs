@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Inheritance
 {
-	public class Task
+	public static class Task
 	{
 		private static double SumOfShapesArea(IEnumerable<Shape> shapes)
 		{
@@ -37,7 +37,7 @@ namespace Inheritance
 			);
 		}
 
-		public static void DoTask()
+		public static void Do()
 		{
 			var shapes = Shapes();
 			PrintShapes(shapes);

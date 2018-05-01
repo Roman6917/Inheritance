@@ -7,8 +7,7 @@ namespace Inheritance
 	{
 		private static void Main(string[] args)
 		{
-			var task = new Task();
-			Task.DoTask();
+			Task.Do();
 
 			Shape figure = new Parallelepiped(Color.Black, Color.Blue, 1.5, 2, 2, 2);
 			Console.Out.WriteLine(string.Format("Volume of parallepiped: {0:F2}", figure.Volume()));
