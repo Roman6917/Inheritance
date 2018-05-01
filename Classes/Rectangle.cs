@@ -4,22 +4,22 @@ namespace Inheritance.Classes
 {
 	public class Rectangle : Shape
 	{
-		private double _height;
+		private double _length;
 		private double _width;
 
-		protected double Hight
+		private double Length
 		{
-			get => _height;
-			private set
+			get => _length;
+			set
 			{
 				if (value < 0.0)
 					throw new ArgumentException("Hight can't be negative");
 
-				_height = value;
+				_length = value;
 			}
 		}
 
-		public double Width
+		private double Width
 		{
 			get => _width;
 			set
@@ -32,20 +32,20 @@ namespace Inheritance.Classes
 		}
 
 		public Rectangle(Color fillingColor = Color.White, Color contourColor = Color.Black, double contourWidth = 0.0,
-			double height = 0.0, double width = 0.0) : base(fillingColor, contourColor, contourWidth)
+			double length = 0.0, double width = 0.0) : base(fillingColor, contourColor, contourWidth)
 		{
-			_height = height;
-			_width = width;
+			Length = length;
+			Width = width;
 		}
 
 		public override double Area()
 		{
-			return Width * Hight;
+			return Width * Length;
 		}
 
 		public override double Perimeter()
 		{
-			return 2 * (Hight + Width);
+			return 2 * (Length + Width);
 		}
 
 		public override double Volume()
@@ -56,8 +56,8 @@ namespace Inheritance.Classes
 		public override string ToString()
 		{
 			return
-				$"Rectangle: \n{base.ToString()}, {nameof(Hight)}: {Hight}, " +
-				$"{nameof(Width)}: {Width}, Area: {Area()}, Perimeter: {Perimeter()}";
+				$"Rectangle:: {base.ToString()}, Length: {Length:F2}, Width: {Width:F2}, " +
+				$"Area: {Area():F2}, Perimeter: {Perimeter():F2}";
 		}
 	}
 }

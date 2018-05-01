@@ -3,29 +3,18 @@ using Inheritance.Classes;
 
 namespace Inheritance
 {
-	class Program
+	internal static class Program
 	{
-		static void Main(string[] args)
+		private static void Main(string[] args)
 		{
-			try
-			{
-				Task task = new Task();
-				task.DoTask();
+			var task = new Task();
+			Task.DoTask();
 
-				var parallepiped = new Parallelepiped(Color.Black, Color.Blue, 1.5, 2, 2, 2);
-				Console.Out.WriteLine($"Volume of parallepiped: {parallepiped.Volume()}");
+			Shape figure = new Parallelepiped(Color.Black, Color.Blue, 1.5, 2, 2, 2);
+			Console.Out.WriteLine(string.Format("Volume of parallepiped: {0:F2}", figure.Volume()));
 
-				var cylinder = new Cylinder(Color.Black, Color.Blue, 2.5, 2, 3);
-				Console.Out.WriteLine($"Volume of cylinder: {cylinder.Volume()}");
-			}
-			catch (ArgumentException e)
-			{
-				Console.WriteLine(e.Message);
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e.Message);
-			}
+			figure = new Cylinder(Color.Black, Color.Blue, 2.5, 2, 3);
+			Console.Out.WriteLine(string.Format("Volume of cylinder: {0:F2}", figure.Volume()));
 		}
 	}
 }

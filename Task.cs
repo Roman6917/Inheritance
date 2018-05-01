@@ -1,34 +1,23 @@
 ﻿using System.Collections.Generic;
 using Inheritance.Classes;
 using System;
+using System.Linq;
 
 namespace Inheritance
 {
 	public class Task
 	{
-		public double SumOfShapesArea(List<Shape> shapes)
+		private static double SumOfShapesArea(IEnumerable<Shape> shapes)
 		{
-			double sum = 0;
-			foreach (var shape in shapes)
-			{
-				sum += shape.Area();
-			}
-
-			return sum;
+			return shapes.Sum(shape => shape.Area());
 		}
-		
-		public double SumOfShapesPerimeter(List<Shape> shapes)
+
+		private static double SumOfShapesPerimeter(IEnumerable<Shape> shapes)
 		{
-			double sum = 0;
-			foreach (var shape in shapes)
-			{
-				sum += shape.Perimeter();
-			}
-
-			return sum;
+			return shapes.Sum(shape => shape.Perimeter());
 		}
-		
-		public List<Shape> Shapes()
+
+		private static List<Shape> Shapes()
 		{
 			var shapes = new List<Shape>
 			{
@@ -39,23 +28,22 @@ namespace Inheritance
 			};
 			return shapes;
 		}
-		
-		public void PrintShapes(List<Shape> shapes)
+
+		private static void PrintShapes(IEnumerable<Shape> shapes)
 		{
 			Console.WriteLine("Your Shapes: ");
-			foreach (var shape in shapes)
-			{
-				Console.Out.WriteLine(shape.ToString());
-			}
+			shapes.ToList().ForEach(shape =>
+				Console.Out.WriteLine($"{{{shape}}}")
+			);
 		}
 
-		public void DoTask()
+		public static void DoTask()
 		{
-			List<Shape> shapes = Shapes();
+			var shapes = Shapes();
 			PrintShapes(shapes);
 
-			Console.WriteLine($"Total area sum of the shapes: {SumOfShapesArea(shapes)}");
-			Console.WriteLine($"Total perimeter sum of the shapes: {SumOfShapesPerimeter(shapes)}");
+			Console.WriteLine($"\nTotal area sum of the shapes: {SumOfShapesArea(shapes):F2}");
+			Console.WriteLine($"\nTotal perimeter sum of the shapes: {SumOfShapesPerimeter(shapes):F2}");
 		}
 	}
 }

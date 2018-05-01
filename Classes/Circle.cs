@@ -21,7 +21,7 @@ namespace Inheritance.Classes
 		public Circle(Color fillingColor = Color.White, Color contourColor = Color.Black, double contourWidth = 0.0,
 			double radius = 0.0) : base(fillingColor, contourColor, contourWidth)
 		{
-			_radius = radius;
+			Radius = radius;
 		}
 
 		public override double Area()
@@ -41,8 +41,7 @@ namespace Inheritance.Classes
 
 		public override string ToString()
 		{
-			return $"Circle:\n{base.ToString()}, " +
-			       $"{nameof(Radius)}: {Radius}, Area: {Area()}, Perimeter: {Perimeter()}";
+			return $"Circle:: {base.ToString()}, Radius: {Radius:F2}, Area: {Area():F2}, Perimeter: {Perimeter():F2}";
 		}
 	}
 }

@@ -5,8 +5,8 @@ namespace Inheritance.Classes
 {
 	public abstract class Shape
 	{
-		private Color FillingColor { get; set; }
-		private Color ContourColor { get; set; }
+		private Color FillingColor { get; }
+		private Color ContourColor { get; }
 
 		private double _contourWidth;
 
@@ -26,17 +26,14 @@ namespace Inheritance.Classes
 
 		protected Shape(Color fillingColor = Color.White, Color contourColor = Color.Black, double contourWidth = 0.0)
 		{
-			_contourWidth = contourWidth;
+			ContourWidth = contourWidth;
 			FillingColor = fillingColor;
 			ContourColor = contourColor;
 		}
 
 		public override string ToString()
 		{
-			return
-				$"{nameof(FillingColor)}: {FillingColor}, " +
-				$"{nameof(ContourColor)}: {ContourColor}, " +
-				$"{nameof(ContourWidth)}: {ContourWidth}";
+			return $"FillingColor: {FillingColor}, ContourColor: {ContourColor}, ContourWidth: {ContourWidth}";
 		}
 
 		public abstract double Area();

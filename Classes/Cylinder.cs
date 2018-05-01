@@ -6,7 +6,7 @@ namespace Inheritance.Classes
 	{
 		private double _height;
 
-		public double Height
+		private double Height
 		{
 			get => _height;
 			set
@@ -26,9 +26,7 @@ namespace Inheritance.Classes
 
 		public override string ToString()
 		{
-			return
-				$"Cylinder based on {base.ToString()}, {nameof(Height)}: {Height}, " +
-				$"Area: {Area()}, Perimeter: {Perimeter()}, Volume: {Volume()}";
+			return $"Cylinder:: [{base.ToString()}], Height: {Height}, Volume: {Volume():F2}";
 		}
 
 		public override double Volume()
