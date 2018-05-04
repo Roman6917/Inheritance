@@ -6,7 +6,7 @@ namespace Inheritance.Classes
 	{
 		private double _radius;
 
-		private double Radius
+		public double Radius
 		{
 			get => _radius;
 			set

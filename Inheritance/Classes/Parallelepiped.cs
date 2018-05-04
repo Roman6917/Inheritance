@@ -4,35 +4,35 @@ namespace Inheritance.Classes
 {
 	public class Parallelepiped : Rectangle
 	{
-		private double _hight;
+		private double _height;
 
-		private double Hight
+		public double Height
 		{
-			get => _hight;
+			get => _height;
 			set
 			{
 				if (value < 0.0)
 					throw new ArgumentException("Width can't be negative");
 
-				_hight = value;
+				_height = value;
 			}
 		}
 
 		public Parallelepiped(Color fillingColor = Color.White, Color contourColor = Color.Black, double contourWidth = 0,
-			double length = 0, double width = 0, double hight = 0.0) : base(fillingColor, contourColor,
+			double length = 0, double width = 0, double height = 0.0) : base(fillingColor, contourColor,
 			contourWidth, length, width)
 		{
-			Hight = hight;
+			Height = height;
 		}
 
 		public override double Volume()
 		{
-			return Area() * Hight;
+			return Area() * Height;
 		}
 
 		public override string ToString()
 		{
-			return $"Parallelepiped:: [{base.ToString()}], Hight: {Hight:F2}, Volume: {Volume():F2}";
+			return $"Parallelepiped:: [{base.ToString()}], Hight: {Height:F2}, Volume: {Volume():F2}";
 		}
 	}
 }

@@ -6,7 +6,7 @@ namespace Inheritance.Classes
 	{
 		private double _height;
 
-		private double Height
+		public double Height
 		{
 			get => _height;
 			set

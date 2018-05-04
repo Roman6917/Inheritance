@@ -17,6 +17,10 @@ namespace Inheritance
 				figure = new Cylinder(Color.Black, Color.Blue, 2.5, 2, 3);
 				Console.Out.WriteLine(string.Format("Volume of cylinder: {0:F2}", figure.Volume()));
 			}
+			catch (ArgumentException e)
+			{
+				Console.WriteLine(e);
+			}
 			catch (Exception e)
 			{
 				Console.WriteLine(e);

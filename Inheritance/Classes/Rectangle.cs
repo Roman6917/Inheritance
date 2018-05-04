@@ -7,7 +7,7 @@ namespace Inheritance.Classes
 		private double _length;
 		private double _width;
 
-		private double Length
+		public double Length
 		{
 			get => _length;
 			set

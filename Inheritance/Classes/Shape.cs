@@ -5,8 +5,8 @@ namespace Inheritance.Classes
 {
 	public abstract class Shape
 	{
-		private Color FillingColor { get; }
-		private Color ContourColor { get; }
+		public Color FillingColor { get; }
+		public Color ContourColor { get; }
 
 		private double _contourWidth;
 
