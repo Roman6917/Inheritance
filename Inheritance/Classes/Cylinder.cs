@@ -21,7 +21,7 @@ namespace Inheritance.Classes
 		public Cylinder(Color fillingColor = Color.White, Color contourColor = Color.Black, double contourWidth = 0,
 			double radius = 0, double height = 0.0) : base(fillingColor, contourColor, contourWidth, radius)
 		{
-			_height = height;
+			Height = height;
 		}
 
 		public override string ToString()
