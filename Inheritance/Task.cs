@@ -2,6 +2,7 @@
 using Inheritance.Classes;
 using System;
 using System.Linq;
+using Inheritance.Enumeration;
 
 namespace Inheritance
 {

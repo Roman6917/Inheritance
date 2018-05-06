@@ -1,4 +1,5 @@
 ﻿using System;
+using Inheritance.Enumeration;
 
 namespace Inheritance.Classes
 {

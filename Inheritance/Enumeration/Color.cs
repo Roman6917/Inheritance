@@ -1,4 +1,4 @@
-﻿namespace Inheritance
+﻿namespace Inheritance.Enumeration
 {
 	public enum Color
 	{
